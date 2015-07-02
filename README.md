@@ -5,5 +5,6 @@
 + JBehave
 + Spring
 + Maven
++ JMockit
 + Travis-CI
 + Web Service Client

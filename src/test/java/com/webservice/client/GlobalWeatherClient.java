@@ -7,6 +7,8 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.WebServiceException;
 
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import net.webservicex.GlobalWeather;
 import net.webservicex.GlobalWeatherSoap;
 
@@ -21,6 +23,8 @@ import com.webservice.utils.ClientPortConfigurator;
  * Global Weather Client
  */
 
+@Data
+@Slf4j
 public class GlobalWeatherClient {
 	
 	private Resource resource;
@@ -46,8 +50,8 @@ public class GlobalWeatherClient {
 					globalWeather.getGlobalWeatherSoap(), balancerAddress, balancerPort); 
 			
 		} catch (IOException io) {
-//			log.error("action=\"Global Weather\", description=\"Error initializing GlobalWeatherClient in initService\", "
-//					+ "error=\"{}\"", io.getLocalizedMessage(), io);
+			log.error("action=\"Global Weather\", description=\"Error initializing GlobalWeatherClient in initService\", "
+					+ "error=\"{}\"", io.getLocalizedMessage(), io);
 		}
 	}
 	
@@ -63,8 +67,8 @@ public class GlobalWeatherClient {
 			weather = port.getWeather(city, country);
 
 		}catch(WebServiceException wex) {
-//			log.error("action=\"Global Weather\", description=\"Error GlobalWeatherClient Request\", "
-//					+ "error=\"{}\"", wex.getLocalizedMessage(), wex);
+			log.error("action=\"Global Weather\", description=\"Error GlobalWeatherClient Request\", "
+					+ "error=\"{}\"", wex.getLocalizedMessage(), wex);
 		} 
 		return weather; 
 	}

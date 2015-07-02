@@ -15,7 +15,7 @@ I want to Check Weather By Country and City Name
 Scenario: Check weather by country and city name
 Given A country Brazil and city Rio de Janeiro
 When I consume GetWeather service
-Then Verify that temperature is 20 C
+Then Verify that temperature is 40 C
 
 
 

@@ -8,10 +8,9 @@
 + JMockit
 + Travis-CI
 + Web Service Client
-+ 
-Prepare Environment:
++ Prepare Environment:
    - mvn eclipse:clean eclipse eclipse
-To Run: (Eclipse IDE)
++ To Run: (Eclipse IDE)
    - clean integration-test
-Debug Mode: (Eclipse IDE)
++ Debug Mode: (Eclipse IDE)
    - clean integration-test -Dmaven.failsafe.debug -X

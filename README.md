@@ -9,7 +9,7 @@
 + Travis-CI
 + Web Service Client
 + Prepare Environment:
-   - mvn eclipse:clean eclipse eclipse
+   - mvn eclipse:clean eclipse:eclipse
 + To Run: (Eclipse IDE)
    - clean integration-test
 + Debug Mode: (Eclipse IDE)

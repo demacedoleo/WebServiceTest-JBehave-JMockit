@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 
 import com.webservice.client.GlobalWeatherClient;
 import com.webservice.mocks.GlobalWeatherMocks;
-import com.webservice.utils.WebServiceUtils;
 
 /**
  * @since 25-05-2015
@@ -29,8 +28,6 @@ public class GlobalWeatherSteps {
 	private String city;
 	
 	@Autowired private GlobalWeatherClient weatherClient;
-	
-	@Autowired private WebServiceUtils webServiceUtils;
 	
 	@BeforeScenario
 	public void setUpMocks() {
